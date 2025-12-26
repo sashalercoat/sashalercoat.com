@@ -19,13 +19,12 @@
             overflow: hidden;
         }
 
-        /* Header hyper centré */
+        /* Header centré sur l’axe réel */
         header {
-            position: absolute;
-            top: 5vh;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
+            padding-top: 5vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
         }
 
         h1 {
@@ -44,6 +43,7 @@
             width: 100%;
             position: relative;
             pointer-events: none;
+            padding-left: 45px; /* compensation sidebar */
         }
 
         .drawing-container img {
@@ -85,12 +85,12 @@
             fill: #1a49c9;
         }
 
-        /* Footer hyper centré */
+        /* Footer centré sur le même axe que le header */
         footer {
-            position: absolute;
-            bottom: 5vh;
-            left: 50%;
-            transform: translateX(-50%);
+            padding-bottom: 5vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
         }
 
         .download-btn {
@@ -110,6 +110,7 @@
             .download-btn { font-size: 1.2rem; }
             .sidebar { left: 20px; }
             .social-link { width: 35px; height: 35px; }
+            main { padding-left: 35px; }
         }
     </style>
 </head>
