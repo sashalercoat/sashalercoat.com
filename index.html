@@ -4,27 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SASHA LERCOAT - Repository</title>
-
     <style>
         body {
             margin: 0;
             padding: 0;
             height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
             font-family: "Helvetica", "Arial", sans-serif;
             background-color: #ffffff;
             color: #1a49c9;
             overflow: hidden;
+            position: relative; /* nécessaire pour position absolute de header/footer */
         }
 
-        /* Header centré sur l’axe réel */
+        /* Centrage parfait du header */
         header {
-            padding-top: 5vh;
-            width: 100%;
-            display: flex;
-            justify-content: center;
+            position: absolute;
+            top: 5vh;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
         }
 
         h1 {
@@ -36,14 +34,11 @@
         }
 
         main {
-            flex-grow: 1;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 100%;
-            position: relative;
             pointer-events: none;
-            padding-left: 45px; /* compensation sidebar */
         }
 
         .drawing-container img {
@@ -52,7 +47,7 @@
             display: block;
         }
 
-        /* Sidebar */
+        /* Sidebar à gauche */
         .sidebar {
             position: absolute;
             left: 40px;
@@ -85,12 +80,12 @@
             fill: #1a49c9;
         }
 
-        /* Footer centré sur le même axe que le header */
+        /* Centrage parfait du footer */
         footer {
-            padding-bottom: 5vh;
-            width: 100%;
-            display: flex;
-            justify-content: center;
+            position: absolute;
+            bottom: 5vh;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .download-btn {
@@ -110,11 +105,9 @@
             .download-btn { font-size: 1.2rem; }
             .sidebar { left: 20px; }
             .social-link { width: 35px; height: 35px; }
-            main { padding-left: 35px; }
         }
     </style>
 </head>
-
 <body>
 
 <header>
