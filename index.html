@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASHA LERCOAT - Repository</title>
+    <style>
+        /* Style "Bureautique" et Institutionnel */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            font-family: "Helvetica", "Arial", sans-serif;
+            background-color: #ffffff;
+            color: #1a49c9; /* Couleur bleue institutionnelle du visuel */
+            overflow: hidden;
+        }
+
+        /* Header - Titre principal */
+        header {
+            padding-top: 5vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* Main - Zone du dessin central */
+        main {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            position: relative;
+        }
+
+        .drawing-container {
+            max-width: 80%;
+            max-height: 60vh;
+            /* L'image sera insérée ici */
+        }
+
+        /* Sidebar - Icônes sociales */
+        .sidebar {
+            position: absolute;
+            left: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .icon {
+            width: 35px;
+            height: 35px;
+            border: 2px solid #1a49c9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: #1a49c9;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Footer - Liens de téléchargement */
+        footer {
+            padding-bottom: 5vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .download-btn {
+            font-size: 2rem;
+            font-weight: 800;
+            text-decoration: none;
+            color: #1a49c9;
+            transition: opacity 0.2s;
+        }
+
+        .download-btn:hover {
+            opacity: 0.7;
+        }
+
+        /* Responsive pour mobile */
+        @media (max-width: 768px) {
+            h1 { font-size: 1.5rem; }
+            .download-btn { font-size: 1.2rem; }
+            .sidebar { left: 15px; }
+            .icon { width: 25px; height: 25px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SASHA LERCOAT</h1>
+    </header>
+
+    <div class="sidebar">
+        <a href="https://www.instagram.com/sashalercoat/" class="icon" title="Instagram">ig</a>
+        <a href="mailto:sashalercoat@gmail.com" class="icon" title="Email">@</a>
+    </div>
+
+    <main>
+        <div class="drawing-container">
+            </div>
+    </main>
+
+    <footer>
+        <a href="Portfolio_Sasha_Lercoat.pdf" class="download-btn" target="_blank">download portfolio</a>
+    </footer>
+
+</body>
+</html>
