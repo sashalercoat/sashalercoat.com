@@ -14,9 +14,12 @@
             color: #1a49c9;
             overflow: hidden;
             position: relative; /* nécessaire pour position absolute de header/footer */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* centre verticalement le contenu */
+            align-items: center;     /* centre horizontalement le contenu */
         }
 
-        /* Centrage parfait du header */
         header {
             position: absolute;
             top: 5vh;
@@ -34,7 +37,7 @@
         }
 
         main {
-            height: 100%;
+            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -80,7 +83,6 @@
             fill: #1a49c9;
         }
 
-        /* Centrage parfait du footer */
         footer {
             position: absolute;
             bottom: 5vh;
@@ -129,7 +131,9 @@
 </div>
 
 <main>
-    <div class="drawing-container" id="drawing-area"></div>
+    <div class="drawing-container" id="drawing-area">
+        <img src="images/parisneversleeps.jpg" alt="Dessin central">
+    </div>
 </main>
 
 <footer>
@@ -137,22 +141,6 @@
         download portfolio
     </a>
 </footer>
-
-<script>
-    const drawings = ['dessin1.jpg', 'dessin2.jpg'];
-
-    function loadRandomDrawing() {
-        if (drawings.length > 0) {
-            const randomIndex = Math.floor(Math.random() * drawings.length);
-            const selectedDrawing = drawings[randomIndex];
-            const imgElement = document.createElement('img');
-            imgElement.src = 'images/' + selectedDrawing;
-            document.getElementById('drawing-area').appendChild(imgElement);
-        }
-    }
-
-    window.onload = loadRandomDrawing;
-</script>
 
 </body>
 </html>
