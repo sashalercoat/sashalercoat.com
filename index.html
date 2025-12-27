@@ -139,14 +139,18 @@
 </footer>
 
 <script>
-    const drawings = ['dessin1.jpg', 'dessin2.jpg'];
+    // 1. On met le bon nom de fichier ici
+    const drawings = ['parisneversleeps.jpg']; 
 
     function loadRandomDrawing() {
         if (drawings.length > 0) {
             const randomIndex = Math.floor(Math.random() * drawings.length);
             const selectedDrawing = drawings[randomIndex];
             const imgElement = document.createElement('img');
-            imgElement.src = 'images/' + selectedDrawing;
+            
+            // 2. On retire 'images/' car le fichier est à la racine
+            imgElement.src = selectedDrawing; 
+            
             document.getElementById('drawing-area').appendChild(imgElement);
         }
     }
